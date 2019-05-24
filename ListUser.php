@@ -9,10 +9,10 @@
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/ui-fcs/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/ui-fcs/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/ui-fcs/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/ui-fcs/css/style.css">
 
     <!-- =======================================================
     Theme Name: Laura
@@ -61,9 +61,9 @@
                         </div>
                         <div class="collapse navbar-collapse" id="lauraMenu">
                             <ul class="nav navbar-nav navbar-right navbar-border">
-                                <li class="active"><a href="/Userinformation/home.php">Home</a></li>
+                                <li class="active"><a href="/home.php">Home</a></li>
                                 <li><a href="#about">About</a></li>
-                                <li><a href="/Userinformation/ListUser.php">Users</a></li>
+                                <li><a href="/ListUser.php">Users</a></li>
                                 <!-- <li><a href="#testimonial">Testimonial</a></li> -->
                                 <li><a href="#contact">Contact Us</a></li>
                             </ul>
@@ -87,7 +87,7 @@
     </div>
 
     <?php
-    $servername = "localhost:3306";
+    $servername = "localhost";
     $database = "facebook";
     $username = "root";
     $password = "";
@@ -114,7 +114,7 @@
         }
         return $rows;
     }
-    $rows = mysqli_select($conn, "SELECT uid, phone FROM experiment limit 20");
+    $rows = mysqli_select($conn, "SELECT uid, name FROM user order by createdAt desc limit 100");
     if ($rows === false) {
         $error = db_error();
     }
@@ -137,7 +137,7 @@
                                 </div>
                                 <div class="info">
                                         <span class="name">
-                                            <a href=/UserInformation/profile.php?phone=<?php echo $value['phone']; ?>><?php echo $value['phone']; ?></a>
+                                            <a href=/Detail.php?id=<?php echo $value['uid']; ?>><?php echo $value['name']; ?></a>
                                         </span>
                                 </div>
                             </div>
@@ -234,13 +234,13 @@
     </div>
   </footer>
 
-<script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<script src="/ui-fcs/js/jquery.min.js"></script>
+  <script src="/ui-fcs/js/jquery.easing.min.js"></script>
+  <script src="/ui-fcs/js/bootstrap.min.js"></script>
 
-  <script src="js/wow.js"></script>
+  <script src="/ui-fcs/js/wow.js"></script>
 
-  <script src="contactform/contactform.js"></script>
+  <script src="/ui-fcs/contactform/contactform.js"></script>
 
 
 

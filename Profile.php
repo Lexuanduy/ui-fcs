@@ -9,10 +9,10 @@
 	<meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="/ui-fcs/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/ui-fcs/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/ui-fcs/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="/ui-fcs/css/style.css">
 	<style type="text/css">
 		.card {
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -73,9 +73,9 @@
 						</div>
 						<div class="collapse navbar-collapse" id="lauraMenu">
 							<ul class="nav navbar-nav navbar-right navbar-border">
-								<li class="active"><a href="/Userinformation/home.php">Home</a></li>
+								<li class="active"><a href="/home.php">Home</a></li>
 								<li><a href="#about">About</a></li>
-								<li><a href="/Userinformation/ListUser.php">Users</a></li>
+								<li><a href="/ListUser.php">Users</a></li>
 								<!-- <li><a href="#testimonial">Testimonial</a></li> -->
 								<li><a href="#contact">Contact Us</a></li>
 							</ul>
@@ -99,7 +99,7 @@
 	</div>
 
 	<?php
-	$servername = "localhost:3306";
+	$servername = "localhost";
 	$database = "facebook";
 	$username = "root";
 	$password = "";
@@ -107,24 +107,39 @@
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error());
 	}
-	$phone = $_GET['phone'];
+	$uid = $_GET['id'];
 
-	$sql = "SELECT uid, phone FROM experiment where phone = '$phone'";
+	$sql = "SELECT uid, name, gender, education, school, university, job, company, address FROM user where uid = '$uid'";
 	$result = $conn->query($sql);
-	$uid;
-	$phone;
+	$name;
+        $gender;
+        $education;
+        $school;
+        $university;
+        $job;
+        $company;
+        $address;
+
 
 	if ($result->num_rows > 0) {
 		while ($row = $result->fetch_assoc()) {
 
-			$uid = $row["uid"];
-			$phone = $row["phone"];
+			$name = $row["name"];
+                $gender = $row["gender"];
+                $education = $row["education"];
+                $school = $row["school"];
+                $university = $row["university"];
+                $job = $row["job"];
+                $company = $row["company"];
+                $address = $row["address"];
+
 		}
 	} else {
 		echo "0 results";
 	}
-	$linkAvatar = 'https://graph.facebook.com/' . $uid . '/picture';
-	$linkFace = 'https://www.facebook.com/' . $uid;
+	 $linkAvatar = 'https://graph.facebook.com/'.$uid.'/picture';
+        $linkFace = 'https://www.facebook.com/'.$uid;
+
 
 	$conn->close();
 	?>
@@ -145,17 +160,22 @@
 	<section id="portfolio" class="section-padding wow fadeInUp delay-05s">
 		<div class="container">
 			<div class="row">
+				<h2 style="text-align:center">User Profile</h2>
 				<div class="card">
-					<img src=<?php echo $linkAvatar ?> alt="" style="width:50%">
-					<h1 class="name" id="name"><?php echo $uid ?></h1>
-					<p class="title" id="education"><?php echo $phone ?></p>
-					<p class="university" id="university">Harvard University</p>
-					<div style="margin: 24px 0;">
+        <img src=<?php echo $linkAvatar ?> alt="" style="width:40%">
+		  <h1><?php echo $name ?></h1>
+		  <p class="title" id="education"><?php echo $education ?></p>
+		  <p><?php echo $school ?></p>
+		  <p><?php echo $university ?></p>
+		  <p><?php echo $job ?></p>
+		  <p><?php echo $company ?></p>
+		  <p><?php echo $address ?></p>
+		 <div style="margin: 24px 0;">
 
-						<a href=<?php echo $linkFace ?> id="linkFace"><i class="fa fa-facebook"></i></a>
-					</div>
+		    <a href=<?php echo $linkFace ?> id="linkFace"><i class="fa fa-facebook"></i></a>
+		  </div>
+		</div>
 
-				</div>
 			</div>
 		</div>
 	</section>
@@ -212,13 +232,13 @@
 			<!--end row-->
 		</div>
 	</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.easing.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/ui-fcs/js/jquery.min.js"></script>
+	<script src="/ui-fcs/js/jquery.easing.min.js"></script>
+	<script src="/ui-fcs/js/bootstrap.min.js"></script>
 
-	<script src="js/wow.js"></script>
+	<script src="/ui-fcs/js/wow.js"></script>
 
-	<script src="contactform/contactform.js"></script>
+	<script src="/ui-fcs/contactform/contactform.js"></script>
 
 </body>
 

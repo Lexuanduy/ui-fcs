@@ -9,10 +9,10 @@
   <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="/ui-fcs/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/ui-fcs/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/ui-fcs/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="/ui-fcs/css/style.css">
 
   <!-- =======================================================
     Theme Name: Laura
@@ -39,9 +39,9 @@
             </div>
             <div class="collapse navbar-collapse" id="lauraMenu">
               <ul class="nav navbar-nav navbar-right navbar-border">
-                <li class="active"><a href="/Userinformation/home.php">Home</a></li>
+                <li class="active"><a href="/home.php">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="/Userinformation/ListUser.php">Users</a></li>
+                <li><a href="/ListUser.php">Users</a></li>
                 <!-- <li><a href="#testimonial">Testimonial</a></li> -->
                 <li><a href="#contact">Contact Us</a></li>
               </ul>
@@ -102,25 +102,25 @@
         <div class="col-md-12">
           <div id="myGrid" class="grid-padding">
             <div class="col-md-4 col-sm-4 padding-right-zero">
-              <img src="img/portfolio01.jpg" class="img-responsive">
-              <img src="img/port01.jpg" class="img-responsive">
-              <img src="img/port02.jpg" class="img-responsive">
-              <img src="img/portfolio01.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/portfolio01.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/port01.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/port02.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/portfolio01.jpg" class="img-responsive">
             </div>
             <div class="col-md-4 col-sm-4 padding-right-zero">
-              <img src="img/portfolio02.jpg" class="img-responsive">
-              <img src="img/port01.jpg" class="img-responsive">
-              <img src="img/port02.jpg" class="img-responsive">
-              <img src="img/portfolio01.jpg" class="img-responsive">
-              <img src="img/port03.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/portfolio02.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/port01.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/port02.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/portfolio01.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/port03.jpg" class="img-responsive">
             </div>
             <div class="col-md-4 col-sm-4 padding-right-zero">
-              <img src="img/port01.jpg" class="img-responsive">
-              <img src="img/portfolio01.jpg" class="img-responsive">
-              <img src="img/portfolio02.jpg" class="img-responsive">
-              <img src="img/port03.jpg" class="img-responsive">
-              <img src="img/portfolio02.jpg" class="img-responsive">
-              <img src="img/port02.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/port01.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/portfolio01.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/portfolio02.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/port03.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/portfolio02.jpg" class="img-responsive">
+              <img src="/ui-fcs/img/port02.jpg" class="img-responsive">
             </div>
           </div>
         </div>
@@ -216,13 +216,13 @@
   </footer>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="/ui-fcs/js/jquery.min.js"></script>
+  <script src="/ui-fcs/js/jquery.easing.min.js"></script>
+  <script src="/ui-fcs/js/bootstrap.min.js"></script>
 
-  <script src="js/wow.js"></script>
+  <script src="/ui-fcs/js/wow.js"></script>
 
-  <script src="contactform/contactform.js"></script>
+  <script src="/ui-fcs/contactform/contactform.js"></script>
 
 </body>
 
